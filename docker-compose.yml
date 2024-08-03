@@ -1,0 +1,11 @@
+services:
+  whisper:
+    build: .
+    container_name: whisper
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]

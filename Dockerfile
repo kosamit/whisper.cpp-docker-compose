@@ -11,4 +11,4 @@ WORKDIR /app/whisper.cpp
 RUN ./models/download-ggml-model.sh small
 RUN GGML_CUDA=1 make server
 
-CMD ["./server", "-m", "models/ggml-small.bin", "-l", "ja"]
+CMD ["./server", "-m", "models/ggml-small.bin", "--host", "0.0.0.0", "-l", "ja"]

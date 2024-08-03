@@ -13,4 +13,4 @@ RUN ./models/download-ggml-model.sh small
 RUN apt install -y build-essential libssl-dev libffi-dev cmake libatlas-base-dev gfortran
 RUN make server
 
-CMD ["./server", "-m", "models/ggml-small.bin", "-l", "ja"]
+CMD ["./server", "-m", "models/ggml-small.bin", "--host", "0.0.0.0", "-l", "ja"]

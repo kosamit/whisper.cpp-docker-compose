@@ -1,6 +1,8 @@
 services:
   whisper:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.gpu
     container_name: whisper
     ports:
       - "8080:8080"
